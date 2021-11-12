@@ -1,0 +1,14 @@
+[
+    {
+      "name": "Hello",
+      "post_content": "Hi I'm a blog post!"
+    },
+    {
+        "name": "Sup",
+        "post_content": "How are you doing?!"
+    },
+    {
+        "name": "I love databases",
+        "post_content": "So much fun?!"
+    }
+]
