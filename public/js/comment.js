@@ -16,7 +16,7 @@ const newCommentHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/');
         } else {
-            alert("Sorry I ain't makin' yer comment.");
+            alert("Sorry... can't add yer comment.");
         }
     }
 };
