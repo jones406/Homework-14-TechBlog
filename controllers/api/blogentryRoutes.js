@@ -18,8 +18,9 @@ router.post('/edit/:id', async (req, res) => {
     try {
         console.log(req.body)
         const updateBlogEntry = await BlogEntry.update(
-        { name: req.body.name,
-        blogentry_content: req.body.blogentry_content,
+        {
+            name: req.body.name,
+            blogentry_content: req.body.blogentry_content,
         },
         { where: { id: req.body.id} }
         );
@@ -39,7 +40,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!postData) {
-        res.status(404).json({ message: "alsdkj"});
+        res.status(404).json({ message: "No matching posts found."});
         return;
     }
 
