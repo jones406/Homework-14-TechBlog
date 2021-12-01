@@ -19,7 +19,7 @@ BlogEntry.init(
     },
     {
         sequelize,
-        timestamps: flase,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'blogentry',

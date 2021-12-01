@@ -26,7 +26,7 @@ const delButtonHandler = async (event) => {
             method: 'DELETE',
         });
         if (response.ok) {
-            document.location.replace('/posts');
+            document.location.replace('/blogentry');
         } else {
             alert("Sorry I cain't delete yer post.");
         }
@@ -34,9 +34,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-    .querySelector('.new-comment-form')
+    .querySelector('.new-blogentry-form')
     .addEventListener('submit', newFormHandler);
-
-document
-    .querySelector('.project-list')
+  
+  document
+    .querySelector('.delete-entry')
     .addEventListener('click', delButtonHandler);

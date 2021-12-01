@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { BlogEntry } = require('../../models');
-const withAuth = require('../../models');
+const withAuth = require('../../utils/auth.js');
 
 router.post('/', async (req, res) => {
   try {
@@ -39,7 +39,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         },
     });
 
-    if (!postData) {
+    if (!blogEntryData ) {
         res.status(404).json({ message: "No matching posts found."});
         return;
     }
