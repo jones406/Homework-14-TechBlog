@@ -13,7 +13,6 @@ Task: Build a CMS-style blog site similar to a Wordpress site, where developers 
 - [Future Improvements](#future-improvements)
 - [Questions](#questions)
 
-
 ## User Story
 ```md
 AS A developer who writes about tech
