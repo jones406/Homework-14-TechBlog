@@ -1,11 +1,11 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
-    const name = document.querySelector('#post_name').value.trim();
-    const post_content = document.querySelector('#post_content').value.trim();
-    if (name && post_content) {
-      const response = await fetch(`/api/posts`, {
+    const name = document.querySelector('#blogentry-name').value.trim();
+    const blogentryDesc = document.querySelector('#blogentry-desc').value.trim();
+    if (name && blogentryDesc) {
+      const response = await fetch(`/api/blogentry`, {
         method: 'POST',
-        body: JSON.stringify({ name, post_content }),
+        body: JSON.stringify({ name, blogentryDesc }),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -20,11 +20,11 @@ const newFormHandler = async (event) => {
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
-      const response = await fetch(`/api/posts/${id}`, {
+      const response = await fetch(`/api/blogentry/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
-        document.location.replace('/posts');
+        document.location.replace('/blogentry');
       } else {
         alert('Failed to delete post!');
       }
@@ -32,9 +32,9 @@ const newFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.new-comment-form')
+    .querySelector('.new-blogentry-form')
     .addEventListener('submit', newFormHandler);
   
   document
-    .querySelector('.project-list')
+    .querySelector('.delete-entry')
     .addEventListener('click', delButtonHandler);

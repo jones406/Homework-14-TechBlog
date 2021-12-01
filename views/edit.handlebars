@@ -1,0 +1,23 @@
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Edit Your Post</h3>
+    <p id="blogentry">{{id}}</p>
+    <form class="form new-blogentry-form">
+      <div class="form-group">
+        <label for="blogentry-name">Title: </label>
+        <input class="form-input" type="text" id="blogentry-name" name="blogentry-name" value={{name}} />
+      </div>
+      <div class="form-group">
+        <label for="blogentry-desc">Entry</label>
+        <textarea class="form-input" id="blogentry-desc" name="blogentry-desc" value={{post_content}}></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+      </div>
+    </form>
+  </div>
+
+<script src="./js/edit.js"></script>

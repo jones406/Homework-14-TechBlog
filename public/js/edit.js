@@ -1,9 +1,9 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const id = document.getElementById('postUpdate').innerHTML
-    const name = document.querySelector('#post_name').value.trim();
-    const post_content = document.getElementById('#post_content').value.trim();
+    const id = document.getElementById('blogentry').innerHTML
+    const name = document.querySelector('#blogentry-name').value.trim();
+    const post_content = document.getElementById('#blogentry-desc').value.trim();
 
     if (name && post_content) {
         const response = await fetch(`/api/blogentry/edit/${id}`, {
@@ -28,7 +28,7 @@ const delButtonHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/posts');
         } else {
-            alert("Sorry I caint delete yer post.");
+            alert("Sorry I cain't delete yer post.");
         }
     }
 };
