@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Post</h3>
+    <form class="form new-blogentry-form">
+      <div class="form-group">
+        <label for="blogentry-name">Title</label>
+        <input class="form-input" type="text" id="blogentry-name" name="blogentry-name" />
+      </div>
+      <div class="form-group">
+        <label for="blogentry-desc">Entry</label>
+        <textarea class="form-input" id="blogentry-desc" name="blogentry-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create Blog Entry</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if blogentry.length}}
+  <div class="col-md-6 project-list">
+    <h3>Your Entries:</h3>
+
+    {{#each blogentry as |blogentry|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/blogentry/{{blogentry.id}}">{{blogentry.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{blogentry.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/blogentry.js"></script>
