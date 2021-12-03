@@ -29,7 +29,7 @@ router.get('/blogentry/:id', async (req, res) => {
         User,
         {
           model: Comment,
-          attributes: [User],
+          include: [User],
         },
       ],
     });
@@ -69,7 +69,7 @@ router.get('/edit/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/blogentry', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
     });

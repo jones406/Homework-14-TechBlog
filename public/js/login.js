@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/posts');
+      document.location.replace('/blogentry');
     } else {
       alert(response.statusText);
     }
