@@ -32,7 +32,7 @@ router.post('/edit/:id', async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-    const blogEntryData = await blogEntryData.destroy({
+    const blogEntryData = await BlogEntry.destroy({
         where: {
             id: req.params.id,
             user_id: req.session.user_id,
