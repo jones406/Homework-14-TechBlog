@@ -1,6 +1,6 @@
 const newCommentHandler = async (event) => {
     event.preventDefault();
-
+    alert('whattttup');
     const comment_text = document.querySelector('#comment').value.trim();
     const post_id = document.getElementById('postid').innerHTML;
 
@@ -22,5 +22,5 @@ const newCommentHandler = async (event) => {
 };
 
 document
-    .querySelector('.comment-form')
+    .querySelector('#comment')
     .addEventListener('submit', newCommentHandler);
