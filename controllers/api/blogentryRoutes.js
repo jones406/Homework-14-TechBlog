@@ -20,7 +20,7 @@ router.post('/edit/:id', async (req, res) => {
         const updateBlogEntry = await BlogEntry.update(
         {
             name: req.body.name,
-            blogentry_content: req.body.blogentry_content,
+            post_content: req.body.post_content,
         },
         { where: { id: req.body.id} }
         );

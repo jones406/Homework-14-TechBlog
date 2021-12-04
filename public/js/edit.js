@@ -3,7 +3,7 @@ const newFormHandler = async (event) => {
 
     const id = document.getElementById('blogentry').innerHTML
     const name = document.querySelector('#blogentry-name').value.trim();
-    const post_content = document.getElementById('#blogentry-desc').value.trim();
+    const post_content = document.getElementById('blogentry-desc').value.trim();
 
     if (name && post_content) {
         const response = await fetch(`/api/blogentry/edit/${id}`, {
@@ -34,9 +34,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-    .querySelector('.new-blogentry-form')
-    .addEventListener('submit', newFormHandler);
+    .querySelector('#submitIt')
+    .addEventListener('click', newFormHandler);
   
   document
-    .querySelector('.delete-entry')
+    .querySelector('#deleteIt')
     .addEventListener('click', delButtonHandler);

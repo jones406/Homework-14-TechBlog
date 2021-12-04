@@ -9,15 +9,15 @@
       </div>
       <div class="form-group">
         <label for="blogentry-desc">Entry</label>
-        <textarea class="form-input" id="blogentry-desc" name="blogentry-desc" value={{post_content}}></textarea>
+        <textarea class="form-input" id="blogentry-desc" name="blogentry-desc">{{post_content}}</textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button id="submitIt" type="submit" class="btn btn-primary">Update</button>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+        <button id="deleteIt" class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
       </div>
     </form>
   </div>
 
-<script src="./js/edit.js"></script>
+<script src="/js/edit.js"></script>
