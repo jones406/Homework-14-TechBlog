@@ -1,7 +1,12 @@
 # TechBlog
+URL: (https://techbloggie.herokuapp.com/)
+Version 1.0
+Deployment Date: 12/04/2021
 
 ## Description  
 Task: Build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. Build this site completely from scratch and deploy it to Heroku. Follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
  
 ## Table of Contents
 - [User Story](#user-story)
@@ -66,8 +71,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
     
       
 ## Contributing
- Contributers: Worked with classmates Todd Taylor, Sam Kilpatrick, Mary Lou Hoover and tutor Jaired Jawed.
- Suggestions can be provided at the email link below.  
+ Contributers: Worked with classmates Todd Taylor, Sam Kilpatrick, Mary Lou Hoover and tutor Jaired Jawed. 
 
 ## Sources
 - [express-handlebars](https://www.npmjs.com/package/)
@@ -78,7 +82,8 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 - [dotenv package](https://www.npmjs.com/package/dotenv)
 
 ## Future Improvements
-Styling
+Styling Improvements, and comment routes working on one machine and not another ...
+ Suggestions can be provided at the email link below. 
 
   ## Questions
   For questions, please check out my Github profile or email me.  
